@@ -58,7 +58,7 @@
             $listCellphone = $this->cellphoneDAO->GetAll();
 
             if(!is_array($listCellphone))
-             $listCellphone = array($listCellphone); // hago esto para que cuando devuelva un solo valor de la base lo convierta en array para no tener problemas en el cellphone-list
+             $listCellphone = array($listCellphone); // hago esto para que cuando devuelva un solo valor de la base lo convierta en array para no tener problemas en el cellphone-list al mostrar la informacion con un foreach
 
             $this->ShowListCellphoneView($listCellphone, $message); 
         }
