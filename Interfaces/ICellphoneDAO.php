@@ -1,5 +1,5 @@
 <?php
-    namespace DAO;
+    namespace Interfaces;
 
     use Models\Cellphone as Cellphone;
 

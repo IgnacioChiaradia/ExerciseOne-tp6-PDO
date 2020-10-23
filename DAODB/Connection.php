@@ -1,5 +1,5 @@
 <?php
-    namespace DAO;
+    namespace DAODB;
 
     use \PDO as PDO;
     use \Exception as Exception;

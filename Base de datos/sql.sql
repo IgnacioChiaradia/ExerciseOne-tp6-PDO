@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS dbcellphones;
+/*DROP DATABASE IF EXISTS dbcellphones;*/
 CREATE DATABASE dbcellphones;
 
 use dbcellphones;

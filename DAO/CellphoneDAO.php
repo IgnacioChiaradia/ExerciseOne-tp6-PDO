@@ -1,8 +1,8 @@
 <?php
     namespace DAO;
 
-    use DAO\ICellphoneDAO as ICellphoneDAO;
-    use DAO\IDAO as IDAO;
+    use Interfaces\ICellphoneDAO as ICellphoneDAO;
+    use Interfaces\IDAO as IDAO;
     use Models\Cellphone as Cellphone;
 
     class CellphoneDAO implements ICellphoneDAO, IDAO

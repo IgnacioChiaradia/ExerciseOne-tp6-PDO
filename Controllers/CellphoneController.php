@@ -2,7 +2,7 @@
     namespace Controllers;
 
     use DAO\CellphoneDAO as CellphoneDAO;
-    use DAO\CellphoneDAODB as CellphoneDAODB;
+    use DAODB\CellphoneDAODB as CellphoneDAODB;
     use Models\Cellphone as Cellphone;
     use Controllers\HomeController as HomeController;
     use \Exception as Exception;

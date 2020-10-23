@@ -1,13 +1,12 @@
 <?php 
-	namespace DAO;
+	namespace DAODB;
 
     use \Exception as Exception;
     use \PDOException as PDOException;
-    use DAO\ICellphoneDAO as ICellphoneDAO;
-    use DAO\IDAO as IDAO;
-    //use DAO\CellphoneDAODB as ICellphoneDAODB;
+    use Interfaces\ICellphoneDAO as ICellphoneDAO;
+    use Interfaces\IDAO as IDAO;
     use Models\Cellphone as Cellphone;
-    use DAO\Connection as Connection;
+    use DAODB\Connection as Connection;
 
     class CellphoneDAODB implements ICellphoneDAO, IDAO
     {
@@ -30,7 +29,7 @@
             }
             catch(Exception $ex)
             {
-            	$pos = strpos($ex, "23000"); // busco en $ex el error PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123' for key 'uniq_code'
+            	$pos = strpos($ex, "23000"); // busco en $ex el error PDOException: SQLSTATE[23000]: Integrity constraint violation
 
             	if($pos !== FALSE){
             		throw new Exception('El numero del codigo ingresado ya existe.'); 	
@@ -65,10 +64,10 @@
         {    
             $query = "DELETE FROM ".$this->tableName." WHERE id_cellphone = :id_cellphone";
 
-            $parameters["id_cellphone"] = $id;
-
         	try
             {
+                $parameters["id_cellphone"] = $id;
+
                 $this->connection = Connection::GetInstance();
                 $this->connection->ExecuteNonQuery($query, $parameters);
             }
@@ -107,16 +106,16 @@
         	$sql = "SELECT * FROM " . $this->tableName . " WHERE code = :code";
 		    $result = array();
 
-            $parameters["code"] = $codeCellphone;
-
 		    try {
-		      $this->connection = Connection::getInstance();
-		      $resultSet = $this->connection->Execute($sql,$parameters);
-		    
-		      if(!empty($resultSet))
-		      {
-		        $result = $this->mapear($resultSet);
-		      }
+                    $parameters["code"] = $codeCellphone;
+
+            	    $this->connection = Connection::getInstance();
+            	    $resultSet = $this->connection->Execute($sql,$parameters);
+            	    
+            	    if(!empty($resultSet))
+            	    {
+            	      $result = $this->mapear($resultSet);
+            	    }
 		  	}
 		    catch(Exception $ex){
 		       throw $ex;
