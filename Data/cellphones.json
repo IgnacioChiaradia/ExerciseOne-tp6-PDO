@@ -1,0 +1,23 @@
+[
+    {
+        "idCellphone": 1,
+        "code": "123",
+        "brand": "asd",
+        "model": "asd",
+        "price": "asd"
+    },
+    {
+        "idCellphone": 2,
+        "code": "321",
+        "brand": "zxc",
+        "model": "zxc",
+        "price": "zxc"
+    },
+    {
+        "idCellphone": 3,
+        "code": "222",
+        "brand": "asd",
+        "model": "asd",
+        "price": "222"
+    }
+]
