@@ -13,8 +13,8 @@
 
         public function __construct()
         {
-            //$this->cellphoneDAO = new CellphoneDAO(); // JSON
-            $this->cellphoneDAO = new CellphoneDAODB(); //PDO
+            $this->cellphoneDAO = new CellphoneDAO(); // JSON
+            //$this->cellphoneDAO = new CellphoneDAODB(); //PDO
         }
 
         public function ShowAddCellphoneView($message = "")

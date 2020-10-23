@@ -58,7 +58,7 @@
           </thead>
           <tbody>
             <tr>
-                <td> <input type="number" value="" name="codeToBorrar" placeholder="123">  </input> </td>
+                <td> <input type="number" name="codeToBorrar" placeholder="123" required>  </input> </td>
                 <td>
                   <button type="submit" name="code_update" class="btn" value=""> UPDATE </button>
                 </td>

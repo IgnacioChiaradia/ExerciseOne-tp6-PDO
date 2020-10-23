@@ -48,7 +48,7 @@
                   <input type="text" name="model" size="20" value="<?php echo $cellphoneSearch->getModel(); ?>" required>
                 </td>     
                 <td>
-                  <input type="text" name="price" size="10" value="<?php echo $cellphoneSearch->getPrice(); ?>" required>
+                  <input type="number" name="price" size="10" value="<?php echo $cellphoneSearch->getPrice(); ?>" required>
                 </td>         
               </tr>
               </tbody>

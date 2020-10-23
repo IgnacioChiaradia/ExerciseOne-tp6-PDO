@@ -1,23 +1,23 @@
 [
     {
         "idCellphone": 1,
-        "code": "123",
-        "brand": "asd",
-        "model": "asd",
-        "price": "asd"
+        "code": "1",
+        "brand": "xiaomiii",
+        "model": "redmi",
+        "price": "1000"
     },
     {
         "idCellphone": 2,
-        "code": "321",
-        "brand": "zxc",
-        "model": "zxc",
-        "price": "zxc"
+        "code": "2",
+        "brand": "alkatel",
+        "model": "onetouch",
+        "price": "2000"
     },
     {
         "idCellphone": 3,
-        "code": "222",
-        "brand": "asd",
-        "model": "asd",
-        "price": "222"
+        "code": "3",
+        "brand": "motogt",
+        "model": "plus",
+        "price": "3000"
     }
 ]

@@ -104,12 +104,14 @@
 
         public function GetCellphoneByCode($codeCellphone)
         {
-        	$sql = "SELECT * FROM " . $this->tableName . " WHERE code = $codeCellphone";
+        	$sql = "SELECT * FROM " . $this->tableName . " WHERE code = :code";
 		    $result = array();
+
+            $parameters["code"] = $codeCellphone;
 
 		    try {
 		      $this->connection = Connection::getInstance();
-		      $resultSet = $this->connection->Execute($sql);
+		      $resultSet = $this->connection->Execute($sql,$parameters);
 		    
 		      if(!empty($resultSet))
 		      {
